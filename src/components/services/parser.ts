@@ -10,6 +10,21 @@ export const parserTitles = (line: string) => {
             resultCode = ind
         }    
     })
+
+    return resultCode;
+}
+
+export const parserWords = (word: string) => {
+    let resultCode = -1;
+    const firstLastLetter = word[0] + word[-1]
+
+    textFormats.forEach((text, ind) => {
+        textFormats.forEach((text, ind) => {
+            if (firstLastLetter[0].includes(text) && firstLastLetter[1].includes(text)) {
+                resultCode = ind
+            }
+        })
+    })
     
     return resultCode;
 }
